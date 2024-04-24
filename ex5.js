@@ -33,13 +33,18 @@ function buscarPez(banco_peces, pezBuscado) {
   let pezEncontrado = false;
   let indicePez = 0;
 
-  while (!pezEncontrado && indicePez <= banco_peces.length) {}
+  while (!pezEncontrado && indicePez < banco_peces.length) {
+    console.log(banco_peces)
+    if (banco_peces[indicePez].nombre === pezBuscado) {
+      pezEncontrado = true;
+  }
+}
 
   return pezEncontrado;
 }
 
 // Esta llamada debería devolver 'true'
-// console.log(buscarPez(banco_peces, 'Nemo'));
+console.log(buscarPez(banco_peces, 'Nemo'));
 
 // Esta llamada debería devolver 'true'
 // console.log(buscarPez(banco_peces, 'Sipho'));
